@@ -1,3 +1,10 @@
+body {
+  background-image: url("background-image/amanda-vick-ohWf6YuzOQk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 200%;
+ }
 #gallery {
     display: flex;
     flex-wrap: wrap;
