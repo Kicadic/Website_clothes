@@ -1,20 +1,46 @@
-body {
-  background-image: url("background-image/amanda-vick-ohWf6YuzOQk-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-size: 100% 200%;
+html {
+  background-color: #fff3df;
  }
+.row{
+  background-color: #fff3df;
+  padding-top:50px;
+}
 #gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    background-color: #fff3df;
   }
   
   #gallery img {
     width: 200px;
     height: auto;
-    border: 2px solid #ddd;
+    border: 2px solid #fff3df;
     border-radius: 5px;
   }
-  
+  .info {
+    background-color: #fff3df;
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+  .social{
+    margin-bottom:2px;
+    padding:2px;
+  }
+  .text{
+    background-color: #fff3df;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .text-box{
+    padding-top: 3%;
+    padding-bottom: 1%;
+  }
+  .text-header{
+    margin:3% 0%;
+    text-align: center;
+  }
+  .description{
+    margin:5%;
+    padding:5px;
+  }
