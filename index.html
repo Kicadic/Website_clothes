@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+    <meta name="vieport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Clothes to sell"
+    />
   <title>Galeria obrazów z Google Drive</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
+  <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
   <script>
@@ -31,27 +44,27 @@
 
     fetchImages().catch(error => console.error('Błąd podczas pobierania obrazów:', error));
   </script>
-<div class="row info">
+<header>
   <div class="col-md-1">
   </div>
   <div class="col-md-6">
-    <h3>About</h3> <br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sollicitudin lectus ut porttitor pellentesque. Maecenas ornare arcu at vehicula viverra. Vivamus id pharetra orci.
+    <div class="main-text">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1> <br>
+    </div>
   </div>
   <div class="col-md-2">
   </div>
     <div class="col-md-3">
-        <h3>Contract</h3> <br>
+        <h1>Contract</h1> <br>
       <div class="social">FB: alskdfjgl <br></div>
       <div class="social">Insta: kjlahsdf <br></div>
       <div class="social">Phone: 125614 <br></div>
-    
   </div>
-</div>
+</header>
 
-<div class="row strip"></div>
+<section class="row strip"></section>
 
-<div class="row text"> 
+<section class="row gallery"> 
     <div class="col"></div>
     <div class="col">
       <h1 class="text-header">Galeria obrazów</h1>
@@ -60,8 +73,6 @@
         </div>
     </div>
     <div class="col"></div>
-</div>
-<div class="gallery">
-</div>
+  </section>
 </body>
 </html>
