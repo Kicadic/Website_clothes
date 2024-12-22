@@ -18,6 +18,8 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
     rel="stylesheet"
   />
+  <!-- Icon used under the MIT License. Copyright (c) 2024 Ionic -->
+  <!--https://ionic.io-->
 </head>
 <body>
   <script>
@@ -48,24 +50,41 @@
   <div class="col-md-1">
   </div>
   <div class="col-md-6">
-    <div class="main-text">
-      <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1> <br>
+    <!--
+    <ul class="main-nav js--main-nav">
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">About me</a></li>
+    </ul>
+    -->
+    <div class="col-md-3">
+      <ul class="contact-header">
+        <li>
+          <a href="#"><ion-icon name="call-outline"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+        </li>
+      </ul>
+    <div class="main">
+      <h1>I am selling the best clothes second hand. Check out my gallery.</h1> <br>
+      <a class="btn btn-full" href="#">Go to gallery</a>
     </div>
   </div>
   <div class="col-md-2">
   </div>
-    <div class="col-md-3">
-        <h1>Contract</h1> <br>
-      <div class="social">FB: alskdfjgl <br></div>
-      <div class="social">Insta: kjlahsdf <br></div>
-      <div class="social">Phone: 125614 <br></div>
-  </div>
 </header>
 
-<section class="row strip"></section>
+<section class="row help">
+  <h1>How it works?</h1>
+</section>
 
 <section class="row gallery"> 
-    <div class="col"></div>
     <div class="col">
       <h1 class="text-header">Galeria obrazów</h1>
         <div>
@@ -74,5 +93,30 @@
     </div>
     <div class="col"></div>
   </section>
+
+  <section class="row about">
+    <h1>About me</h1>
+  </section>
+
+  <footer>
+    <div class="col-md-3">
+      <ul class="contact-footer">
+      <li>
+        <a href="#"><ion-icon name="call-outline"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      </li>
+      <li>
+        <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+      </li>
+      </ul>
+  </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

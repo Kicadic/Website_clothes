@@ -73,13 +73,94 @@ h3 {
 /* HEADER */
 /* ------------------------------------------------ */
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url(./img/amanda-vick-ohWf6YuzOQk-unsplash.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
   background-attachment: fixed;
 }
+
+.main{
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main h1{
+  margin-bottom:25px;
+}
+/* ------------------------------------------------ */
+/* CONTACT */
+/* ------------------------------------------------ */
+.contact-header, .contact-footer{
+  list-style: none;
+  float: right;
+}
+
+.contact-header li{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.contact-header li a:link,
+.contact-header li a:visited{
+  font-size:120%;
+  color:#555;
+}
+
+.contact-header li a:link,
+.contact-header li a:visited{
+  font-size:120%;
+  color:#555;
+}
+
+.contact-header li a:hover,
+.contact-header li a:active{
+  color:#e7e7e7;
+}
+
+.contact-footer li{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-footer li a:link,
+.contact-footer li a:visited{
+  font-size:120%;
+  color:#CD88AF;
+}
+
+.contact-footer li a:hover,
+.contact-footer li a:active{
+  color:#E1B4CD;
+}
+
+/* ------- BUTTONS ------*/
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: #AA3939;
+  border: 2px solid #801515;
+  color: #fff;
+  margin-right: 17px;
+}
+.btn:hover,
+.btn:active{
+  background-color: #D46A6A;
+  cursor: pointer;
+  border: 2px solid #801515;
+}
+/* Color pallete: https://paletton.com/#uid=5000u0kllllaFw0g0qFqFg0w0aF*/
+
 /* ------------------------------------------------ */
 /* GALLERY */
 /* ------------------------------------------------ */
@@ -92,14 +173,15 @@ header {
   #gallery img {
     width: 200px;
     height: auto;
-    border: 2px solid #f1f1f1;
+    border: 2px solid #AA6C39;
     border-radius: 5px;
   }
 
-.main-text{
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+/* ------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------ */
+footer {
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
+}
