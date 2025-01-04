@@ -22,30 +22,7 @@
   <!--https://ionic.io-->
 </head>
 <body>
-  <script>
-    const folderId = 'ID_FOLDERU';  // Wstaw ID folderu z Google Drive
-    const apiKey = 'TWOJ_KLUCZ_API';  // Wstaw tutaj swój klucz API Google
-
-    // Funkcja pobierająca listę plików z Google Drive
-    async function fetchImages() {
-      const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`;
-      const response = await fetch(url);
-      const data = await response.json();
-
-      const gallery = document.getElementById('gallery');
-
-      data.files.forEach(file => {
-        if (file.mimeType.startsWith('image/')) {
-          const imgElement = document.createElement('img');
-          imgElement.src = `https://drive.google.com/uc?id=${file.id}`;
-          imgElement.alt = file.name;
-          gallery.appendChild(imgElement);
-        }
-      });
-    }
-
-    fetchImages().catch(error => console.error('Błąd podczas pobierania obrazów:', error));
-  </script>
+  <script src="js/script.js"></script> 
 <header>
   <div class="col-md-1">
   </div>
@@ -72,40 +49,69 @@
         </li>
       </ul>
     <div class="main">
-      <h1>I am selling the best clothes second hand. Check out my gallery.</h1> <br>
-      <a class="btn btn-full" href="#">Go to gallery</a>
+      <h1>I am selling the best clothes second hand &mdash; check out my gallery.</h1> <br>
+      <a class="btn btn-full" href="#gallery">Go to gallery</a>
     </div>
   </div>
   <div class="col-md-2">
   </div>
 </header>
-
+<div id="test">
 <section class="row help">
-  <h1 class="dark-text">How it works?</h1>
-  <ol>
-    <li>Choose a product you are interested in from my gallery.</li>
-    <li>Find me on social media.</li>
-    <li>Text me. I will answer your questions and give you a price.</li>
-    <li>If you accept the offer - text me again, let me know that you want the product.</li>
-    <li>I will give you a bank account to transfer money. I expect an address to send you a product.</li>
-  </ol>
-</section>
-
-<section class="row gallery"> 
-    <div class="col">
-      <h1 class="text-header dark-text">Gallery</h1>
+  <h2 class="dark-text">How it works?</h2>
+  <div class="steps-box">
+    <div class="step">
+      <div>1</div>
+      <p>
+        Choose a product you are interested in from my gallery.
+      </p>
     </div>
-    <div class="col"></div>
-  </section>
+    <div class="step">
+      <div>2</div>
+      <p>
+        Find me on social media.
+      </p>
+    </div>
+    <div class="step">
+      <div>3</div>
+      <p>
+        Text me. I will answer your questions and give you a price.
+      </p>
+    </div>
+    <div class="step">
+      <div>4</div>
+      <p>
+        If you accept the offer - text me again, let me know that you want the product.
+      </p>
+    </div>
+    <div class="step">
+      <div>5</div>
+      <p>
+        I will give you a bank account to transfer money. I expect an address to send you a product.
+      </p>
+    </div>
+  </div>
+</section>
+</div>
 
+<div id="gallery-color">
+  <section class="row"> 
+    <div class="col">
+      <h2 class="text-header dark-text">Gallery</h2>
+    </div>
+    <div id="gallery" class="col">
+    </div>
+  </section>
+</div>
   <section class="row about">
-    <h1 class="dark-text">About me</h1>
+    <h2 class="dark-text">About me</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis ipsum sit amet dolor rhoncus semper. Fusce at elit sit amet velit viverra maximus in id metus. Suspendisse rhoncus fermentum dolor imperdiet ornare. Aliquam eu massa elementum, lobortis dui ut, cursus orci. Curabitur semper eget velit elementum fermentum. Nulla tincidunt massa eu commodo dictum. </p>
   </section>
 
   <footer>
-    <div class="col-md-3">
+    <div class="col-md-2">
       <ul class="contact-footer">
+        <p>Individual person. Text me on </p>
       <li>
         <a href="#"><ion-icon name="call-outline"></ion-icon></a>
       </li>
