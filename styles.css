@@ -185,14 +185,14 @@ h2 {
 /* GALLERY */
 /* ------------------------------------------------ */
 
-#gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center; /* Wyśrodkowanie galerii */
 }
 
-#gallery img.gallery-image {
+.gallery img.gallery-image {
   width: 200px;
   height: auto;
   border: 2px solid #AA6C39;
@@ -201,11 +201,11 @@ h2 {
   transition: transform 0.2s; /* Efekt powiększenia na hover */
 }
 
-#gallery img.gallery-image:hover {
+.gallery img.gallery-image:hover {
   transform: scale(1.05);
 }
 
-#gallery-color{
+.gallery-color{
   background-color: #ffffff;
 }
 
