@@ -2,6 +2,12 @@ const folderId = '';  // Wstaw ID folderu z Google Drive. FolderID znajduje się
 const apiKey = '';  // Wstaw tutaj swój klucz API Google. Znajdziesz go po ustawieniu Google Cloud.
 const corsProxy = "https://cors-anywhere.herokuapp.com/";
 
+// Pobranie referencji do modala
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("fullImage");
+const captionText = document.getElementById("caption");
+const closeModal = document.querySelector(".close");
+
 // Funkcja pobierająca listę plików z Google Drive
 async function fetchImages() {
   const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`;
@@ -13,19 +19,23 @@ async function fetchImages() {
 
   galleries.forEach(gallery => {
     data.files.forEach(file => {
-      // Sprawdzamy, czy typ MIME to obraz
       if (file.mimeType.startsWith('image/')) {
         const imgElement = document.createElement('img');
-        // URL do wyświetlenia obrazu
         imgElement.src = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`;
         imgElement.alt = file.name;
         imgElement.style.width = '300px';
         imgElement.style.height = '300px';
         imgElement.style.margin = '10px';
+        imgElement.style.cursor = 'pointer';
         gallery.appendChild(imgElement);
-        console.log('Generowany URL:', imgElement.src);
+        
+        // Obsługa kliknięcia - otwieranie modala
+        imgElement.addEventListener('click', function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.textContent = this.alt;
+        });
       } else {
-        // Jeśli nie jest obrazem, wyświetlamy nazwę pliku jako tekst
         const textElement = document.createElement('p');
         textElement.textContent = `Plik: ${file.name}`;
         gallery.appendChild(textElement);
@@ -33,6 +43,18 @@ async function fetchImages() {
     });
   });
 }
+
+// Zamknięcie modala po kliknięciu na "X"
+closeModal.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+// Zamknięcie modala po kliknięciu poza obraz
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
 // Wywołanie funkcji
 fetchImages().catch(error => console.error('Błąd podczas pobierania obrazów:', error));
