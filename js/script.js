@@ -5,7 +5,6 @@ const corsProxy = "https://cors-anywhere.herokuapp.com/";
 // Pobranie referencji do modala
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("fullImage");
-const captionText = document.getElementById("caption");
 const closeModal = document.querySelector(".close");
 
 // Funkcja pobierająca listę plików z Google Drive
@@ -33,7 +32,6 @@ async function fetchImages() {
         imgElement.addEventListener('click', function () {
           modal.style.display = "block";
           modalImg.src = this.src;
-          captionText.textContent = this.alt;
         });
       } else {
         const textElement = document.createElement('p');
