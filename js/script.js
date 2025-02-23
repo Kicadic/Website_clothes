@@ -12,6 +12,7 @@ async function fetchImages() {
   const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`;
   const response = await fetch(url);
   const data = await response.json();
+  var increm = 0;
 
   // Pobieramy wszystkie elementy z klasą 'gallery'
   const galleries = document.querySelectorAll('.gallery');
@@ -25,13 +26,35 @@ async function fetchImages() {
         imgElement.style.width = '300px';
         imgElement.style.height = '300px';
         imgElement.style.margin = '10px';
-        imgElement.style.cursor = 'pointer';
-        gallery.appendChild(imgElement);
         
+        // Style numerowanie
+        gallery.appendChild(imgElement);
+        increm = increm + 1;
+        const numElement = document.createElement('p');
+        numElement.textContent = increm; 
+        numElement.style.top = '12px';
+        numElement.style.right = '27%';
+        numElement.style.position = 'relative';
+        numElement.style.height = '40px';
+        numElement.style.width = '40px';
+        numElement.style.color = '#FFD1AA';
+        numElement.style.fontSize = 'x-large';
+        numElement.style.borderRadius = '200px';
+        numElement.style.border = '2px solid #D49A6A';
+        numElement.style.display = 'inline-block';
+        numElement.style.textAlign = 'center';
+        numElement.style.fontWeight = '500';
+        numElement.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7))';
+        gallery.appendChild(numElement);
+
         // Obsługa kliknięcia - otwieranie modala
         imgElement.addEventListener('click', function () {
           modal.style.display = "block";
           modalImg.src = this.src;
+          modalImg.style.cursor = 'auto';
+          // Usunięcie efektu opacity
+          this.style.opacity = "1"; 
+          clickedImage = this; // Zapamiętaj, który obrazek został kliknięty
         });
       } else {
         const textElement = document.createElement('p');
@@ -44,13 +67,23 @@ async function fetchImages() {
 
 // Zamknięcie modala po kliknięciu na "X"
 closeModal.addEventListener("click", function () {
-  modal.style.display = "none";
+  modal.style.display = "none"; 
+  // Przywrócenie efektu hover po zamknięciu modala
+  if (clickedImage) {
+    clickedImage.style.opacity = ""; // Usunięcie inline-style, wraca do CSS
+    clickedImage = null; // Reset zmiennej
+}
 });
 
 // Zamknięcie modala po kliknięciu poza obraz
 modal.addEventListener("click", function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
+    // Przywrócenie efektu hover po zamknięciu modala
+    if (clickedImage) {
+      clickedImage.style.opacity = ""; // Usunięcie inline-style, wraca do CSS
+      clickedImage = null; // Reset zmiennej
+  }
   }
 });
 
