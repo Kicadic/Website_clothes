@@ -73,6 +73,7 @@ h3 {
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.75)),
     url(./img/amanda-vick-ohWf6YuzOQk-unsplash.jpg);
+    /*Photo by Amanda Vick on Unsplash*/
   background-size: cover;
   background-position: center;
   height: 100vh;
