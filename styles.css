@@ -117,7 +117,7 @@ h2 {
 h2:after {
   display: block;
   height: 2px;
-  background-color: #D46A6A;
+  background-color: #94240C;
   content: " ";
   width: 300px;
   margin: 0 auto;
@@ -161,12 +161,12 @@ ul > li a:active{
 .contact-footer li a:link,
 .contact-footer li a:visited{
   font-size:150%;
-  color:#CD88AF;
+  color:#BA2809;
 }
 
 .contact-footer li a:hover,
 .contact-footer li a:active{
-  color:#E1B4CD;
+  color:#94240C;
 }
 
 /* ------- BUTTONS ------*/
@@ -178,18 +178,18 @@ ul > li a:active{
   text-decoration: none;
   border-radius: 200px;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
-  background-color: #AA3939;
-  border: 2px solid #a73636;
+  background-color: #2F100A;
+  border: 2px solid #5F190A;
   color: #fff;
   margin-right: 17px;
 }
 .btn:hover,
 .btn:active{
-  background-color: #D46A6A;
+  background-color: #5F190A;
   cursor: pointer;
-  border: 2px solid #c96464;
+  border: 2px solid #94240C;
 }
-/* Color pallete: https://paletton.com/#uid=5000u0kllllaFw0g0qFqFg0w0aF*/
+/* Color pallete: https://paletton.com/#uid=3081q0ksDbWuynkt9i6qh8Zp75P*/
 
 /* ------------------------------------------------ */
 /* GALLERY */
@@ -205,7 +205,7 @@ ul > li a:active{
 .gallery img.gallery-image {
   width: 200px;
   height: auto;
-  border: 2px solid #AA6C39;
+  border: 2px solid #1E0C41;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s; /* Efekt powiększenia na hover */
@@ -318,8 +318,8 @@ footer ul p{
   margin-bottom: 40px;
 }
 .step div {
-  color: #661141;
-  border: 3px solid #440026;
+  color: #2E1165;
+  border: 3px solid #1E0C41;
   display: inline-block;
   border-radius: 15%;
   height: 55px;

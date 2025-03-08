@@ -32,19 +32,19 @@ async function fetchImages() {
         increm = increm + 1;
         const numElement = document.createElement('p');
         numElement.textContent = increm; 
-        numElement.style.top = '12px';
+        numElement.style.top = '14px';
         numElement.style.right = '27%';
         numElement.style.position = 'relative';
         numElement.style.height = '40px';
         numElement.style.width = '40px';
-        numElement.style.color = '#FFD1AA';
+        numElement.style.color = '#2D1262';
         numElement.style.fontSize = 'x-large';
         numElement.style.borderRadius = '200px';
-        numElement.style.border = '2px solid #D49A6A';
+        numElement.style.border = '2px solid #190D31';
         numElement.style.display = 'inline-block';
         numElement.style.textAlign = 'center';
-        numElement.style.fontWeight = '500';
-        numElement.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7))';
+        numElement.style.fontWeight = '600';
+        numElement.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7))';
         gallery.appendChild(numElement);
 
         // Obsługa kliknięcia - otwieranie modala
